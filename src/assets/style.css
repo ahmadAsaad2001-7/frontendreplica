@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+/* إعداداتك العامة *//* الأشكال الدوائية */
+.pill-visual { display: flex; align-items: center; justify-content: center; }
+.capsule { width: 72px; height: 28px; border-radius: 14px; position: relative; overflow: hidden; box-shadow: inset 0 -3px 6px rgba(0,0,0,.1), 0 4px 10px rgba(0,0,0,.1); }
+.capsule::after { content:''; position:absolute; top:0; bottom:0; left:50%; width:2px; background: rgba(0,0,0,.08); }
+.tablet { width: 50px; height: 50px; border-radius: 50%; box-shadow: inset -4px -4px 8px rgba(0,0,0,.12), inset 3px 3px 6px rgba(255,255,255,.3), 0 4px 10px rgba(0,0,0,.1); position: relative; }
+.tablet::after { content:''; position:absolute; top:50%; left:10%; right:10%; height:2px; background: rgba(0,0,0,.08); transform: translateY(-50%); }
+.syrup-bottle { width: 44px; height: 56px; position: relative; border-radius: 6px 6px 8px 8px; box-shadow: inset -4px -2px 8px rgba(0,0,0,.1), 0 4px 10px rgba(0,0,0,.1); }
+.syrup-bottle::before { content:''; position:absolute; top:-10px; left:50%; transform:translateX(-50%); width:18px; height:12px; border-radius:3px 3px 0 0; background: inherit; filter: brightness(.7); }
+.ampoule { width: 24px; height: 56px; position: relative; border-radius: 12px 12px 4px 4px; box-shadow: inset -3px -2px 6px rgba(0,0,0,.1), 0 4px 8px rgba(0,0,0,.08); }
+.inhaler { width: 36px; height: 52px; position: relative; border-radius: 6px 6px 4px 4px; box-shadow: inset -3px -2px 6px rgba(0,0,0,.1), 0 4px 8px rgba(0,0,0,.08); }
+body {
+    @apply bg-slate-50 text-slate-800 antialiased font-sans;
+}
+
+/* إعدادات الوضع الليلي لو بتستخدمه */
+html.dark body {
+    @apply bg-slate-950 text-slate-100;
+}
+
